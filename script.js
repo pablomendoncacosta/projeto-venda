@@ -149,7 +149,6 @@ atualizarCarrinho = () => {
 
         var valr = val.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
         if(val.quantidade > 0){
-            window.alert("voce adicionou um produto no carrinho")
             location.href='#carinho'
             prodt.style.display='block'
          containerCarrinho.innerHTML+=`
