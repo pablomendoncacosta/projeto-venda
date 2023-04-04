@@ -1,0 +1,54 @@
+@charset "UTF_8";
+
+@media print{
+    body{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    header {
+        display: none;
+    }
+    main::after{
+        content: 'Desenvolvido por Pablo Mendonça costa';
+    }
+}
+@media screen and (min-width:768px){
+    #Opfilter{
+        display: block;
+        position: absolute;
+        float: left;
+        width: 100px;
+    }
+    article{
+        width: 90%;
+        float: right;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+   .menu h1{
+    margin-right:100px ;
+   }
+    #pesquisa{
+        margin-right: 100px;
+    }
+    #conta{
+        justify-content: right;
+        margin-right:100px;
+    }
+    #prodt{
+        display: none;
+        background-color: wheat;
+        width: 250px;
+        right: 8%;
+    }
+    .Valor{
+        margin: 5px 0; 
+    }
+    .btn-compra{
+        margin-bottom: 5px;
+    }
+   
+#valor{
+    width:100px;
+}
+}

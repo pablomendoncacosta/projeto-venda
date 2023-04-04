@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de vena</title>
+    <link rel="stylesheet" href="Estilo/style.css">
+    <link rel="stylesheet" href="Estilo/mediaquery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
+    <script src="script.js" defer></script>
+</head>
+<body onresize="Tela()">
+    <header>
+        <div class="menu">
+            <H1>Bebidas</H1>
+            <input type="search" placeholder="Pesquisa" name="ifilter" id="pesquisa">
+            <input id="conta" type="button" value="Conta"> 
+            <div id="carinho">
+                <span id="cart"  onclick="carrinho()"  class="material-symbols-outlined">
+                    shopping_cart_checkout
+                    </span>
+                    <div id="quantidadecar">
+                       <p>0</p>
+                    </div>
+                    <div id="prodt">
+                        <div id="Fan-carrinho">
+                            <p>Seu carrinho esta vario</p>
+                        </div>
+                        <div class="Valor">
+                            <p>TOTAl</p>
+                            <div id="preco">
+              
+                            </div>
+                
+                        </div>
+                        <div class="btn-compra">
+                         <a href="#">Comprar</a>
+                         <button onclick="limpar()">limpar carrinho</button> 
+                        </div>
+                    
+                    </div>
+            </div> <!--carinho-->
+        </div><!--menu-->
+        <div class="btn-products" > 
+            <a href="#">Cerveja</a>
+            <a href="#">Whisky</a>
+            <a href="#">Vinho</a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="fan-fil" >  
+                <span onclick="fil()"class="material-symbols-outlined">
+                    filter_alt
+                    </span>
+                    <div id="Opfilter">
+                    <ul> <div onclick="Pvalor()">Valor</div>
+                        <li id="value">
+                            <label for="Value">Pesquisa:</label><br>
+                            <input type="number" name="num" id="valor" placeholder="Pesquisa" step="5">
+                        </li>
+                    </ul>
+                    <ul> <div onclick="alcool()">Com ou Sem alcool</div>
+                        <li id="cosalcool">
+                            <input type="radio" name="alcool" id="calc">
+                            <label for="calc">Com álcool</label><br>
+                            <input type="radio" name="alcool" id="salc">
+                             <label for="salc">Sem álcool</label>
+                        </li>
+                    </ul>
+                </div>
+            </div><!--fan-fil-->
+        </section>
+        <article>
+            <div id="produtos">
+                
+            </div>
+        </article>
+    </main>
+</body>
+</html>
