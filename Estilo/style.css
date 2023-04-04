@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
 }
+
 @import url('https://fonts.googleapis.com/css2?family= Concert+One & display=swap') ;
 
 :root{
@@ -13,13 +14,15 @@
 body{
     background-color: #bfa399;
     font-size: var(--font1-);
-    
+    width: 100vw;
+    height: 100vh;    
 }
 
 
 header{
     background-color: #f20732;
     height: 98px;
+    width: 100vw;
 }
 header .menu{
     display: flex;
