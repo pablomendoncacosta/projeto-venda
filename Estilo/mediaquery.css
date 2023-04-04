@@ -11,6 +11,11 @@
         content: 'Desenvolvido por Pablo Mendonça costa';
     }
 }
+@media screen and (min-width:600px) and (max-width:768px){
+    #pesquisa{
+        width: 80px;
+    }
+}
 @media screen and (min-width:768px) and (max-width:992px){
     #Opfilter{
         display: block;
@@ -49,7 +54,7 @@
         margin-bottom: 5px;
     }
    
-#valor{
+    #valor{
     width:100px;
 }
 }

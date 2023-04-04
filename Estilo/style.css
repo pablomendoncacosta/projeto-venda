@@ -23,7 +23,6 @@ body{
 header{
     background-color: #f20732;
     height: 98px;
-    min-width: 150px;
     width: 100vw;
 }
 header .menu{
