@@ -15,6 +15,8 @@
 body{
     background-color: #bfa399;
     font-size: var(--font1-);
+    height: 100vh;
+    width: 100vw;
 }
 
 
@@ -58,7 +60,7 @@ header .menu{
 }
 
 
-.btn-products  > a {
+.btn-products  > button {
     color: white;
     text-decoration: none;
     padding: 5px;
@@ -67,7 +69,7 @@ header .menu{
     font-weight: bold;
 }
 
-.btn-products > a:hover{
+.btn-products > button:hover{
     background-color: #660825;
     border-radius: 20px 0 20px;
 }
@@ -172,6 +174,7 @@ article{
     display: flex;
     justify-content: center;
     text-align: center;
+
 }
 #fan-single{
     display: inline-flex;
@@ -185,6 +188,7 @@ article{
     font-weight: bold;
     margin-top: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.46);
+    transition: width 10s ,height 10s;
 }
 .single > img{
     width: 100%;
@@ -222,4 +226,16 @@ article{
 }
 .button:hover{
     background-color: white;
+}
+
+
+
+#apresentaçao{
+    display: block;
+    text-align: center;
+    background-color: #965842;
+}
+.Apren-cs{
+    background-color: #bfa399;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.638);
 }

@@ -150,8 +150,9 @@ atualizarCarrinho = () => {
         var valr = val.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
         if(val.quantidade > 0){
             location.href='#carinho'
+            window.location.href='#prodt'
             prodt.style.display='block'
-         containerCarrinho.innerHTML+=`
+            containerCarrinho.innerHTML+=`
             <hr>
             <p id="quantidade">           
             <label for="iexpluir">`+val.nome+`  quantidade:`+val.quantidade+`|`+valr+`|</label>
@@ -193,7 +194,9 @@ atualizarPreco = () => {
     containerPreco.innerHTML="";
     items.map((val)=>{
         if(val.quantidade > 0){
-                resultado = val.quantidade * val.valor
+
+            console.log(val.quantidade)
+                resultado = quantidade * val.valor
             console.log(resultado)
             containerPreco.innerHTML+=`
             <p >  `+resultado+`  </p>
@@ -211,5 +214,30 @@ function limpar(){
         elemento.remove();
     }
 }
+
+const itens=[
+    {
+        imgp:'./imagens/01-p.jpg',
+        img:'./imagens/01.jpg',
+    }
+]
+
+function Cerveja() {
+    var containerAp = document.getElementById('apresentaçao')
+        itens.map((val)=>{
+            containerAp.innerHTML=''
+            window.location.href='#apresentaçao'
+            containerAp.innerHTML+=`
+            <div class="Apren-cs">
+            <picture>
+            <source media="(max-width: 780px)" srcset="`+val.imgp+`" type="image/jpg">
+            <img src="`+val.img+`" alt="">
+        </picture>
+            </div>
+            `
+        })
+    }
+
+
 
 
