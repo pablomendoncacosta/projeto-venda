@@ -35,10 +35,11 @@ header .menu{
 }
 .menu h1{
     color: white;
-    margin-right: 0.7em;
+    margin-right: 1.0em;
 }
 #pesquisa{
     height: 25px;
+    width: 80px;
     margin-top:10px;
     margin-right: 5px;
 }
