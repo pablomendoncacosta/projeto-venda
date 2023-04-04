@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box
 }
 
 @import url('https://fonts.googleapis.com/css2?family= Concert+One & display=swap') ;
@@ -21,7 +22,7 @@ body{
 
 header{
     background-color: #f20732;
-
+    height: 98px;
     width: 100vw;
 }
 header .menu{
@@ -39,10 +40,11 @@ header .menu{
 #pesquisa{
     height: 25px;
     margin-top:10px;
+    margin-right: 5px;
 }
 #conta{
     height: 25px;
-    margin-right: 10px;
+    margin-right: 5px;
     margin-top: 10px;
     padding: 2px;
     color: white;
@@ -55,6 +57,8 @@ header .menu{
 #cart{
     margin-top: 10px
 }
+
+
 .btn-products  > a {
     color: white;
     text-decoration: none;
