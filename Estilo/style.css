@@ -15,8 +15,6 @@
 body{
     background-color: #bfa399;
     font-size: var(--font1-);
-    height: 100vh;
-    width: 100vw;
 }
 
 
@@ -24,23 +22,29 @@ header{
     background-color: #f20732;
     height: 100px;
 }
-header .menu{
+ .menu{
     display: flex;
-    justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px; 
     width: 100vw;
     cursor: pointer;
      
 }
+.menu-b{
+    display: flex;
+    justify-content: center;
+}
+
 .menu > h1{
    font-size: 1.5em;
+   text-align: left;
     color: white;
     margin-top: 10px;
     margin-right:10px;
 }
 #pesquisa{
     height: 25px;
+    text-align: center;
     width: 30%;
     margin-top:10px;
     margin-right: 5px;
