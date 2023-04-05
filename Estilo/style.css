@@ -24,19 +24,16 @@ header{
 }
  .menu{
     display: flex;
+    justify-content: center;
     padding-top: 10px;
     padding-bottom: 10px; 
     width: 100vw;
     cursor: pointer;
      
 }
-.menu-b{
-    display: flex;
-    justify-content: center;
-}
 
 .menu > h1{
-   font-size: 1.5em;
+   font-size: 1em;
    text-align: left;
     color: white;
     margin-top: 10px;
