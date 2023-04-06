@@ -137,12 +137,17 @@ header{
     font-weight: bolder;
 
 }
-#preco >p::before{
-    content: 'R$';
-}
+
 #Opfilter{
     display: none;
 }
+ #valor{
+    width: 100px;
+}
+
+
+
+
 .btn-compra{
     margin-bottom: 5px;
 }
@@ -248,4 +253,57 @@ article{
     margin-top: 90px;
     color: white;
     text-shadow: 0px 0px 13px rgb(0, 0, 0);
+}
+
+
+footer{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    font-family: var(--font1-);   
+    margin-top: 20px;
+    padding: 10px;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.37);
+
+}
+.Att{
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+.Att > h1{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.Att > a{
+    display: flex;
+    text-decoration: none;
+    color: black;
+    margin-top: 5px;
+    font-size: 15px;
+}
+.Att span{
+    color: black;
+    font-size: 15px;
+}
+.Att > a:hover{
+    color: #965842;
+}
+
+.Serviço{
+    padding-bottom: 5px;
+}
+.Serviço > h1{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.Serviço > a{
+    text-decoration: none;
+    color: black;
+}
+.Serviço >a:hover{
+    color: #965842;
+}
+.Pag > h1{  
+    font-size: 1.2em;
+    font-weight: bold;
 }

@@ -14,63 +14,69 @@
 
 @media screen and (min-width:768px) and (max-width:992px){
 
-    #Opfilter{
-        position: absolute;
-        width: 100px;
-    }
-    article{
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-   .menu h1{
+     .menu h1{
         margin-right:100px ;
    }
-    #pesquisa{
+     #pesquisa{
         margin-right: 100px;
         width: 40%;
     }
     #conta{
-        justify-content: right;
-        margin-right:50px;
+       margin-right:50px;
     }
+  
     #prodt{
         display: none;
         background-color: wheat;
         width: 250px;
         right: 8%;
     }
-    .Valor{
-        margin: 5px 0; 
-    }
-    .btn-compra{
+   .btn-compra{
         margin-bottom: 5px;
     }
+ 
    
-    #valor{
-        width:100px;
+    #Opfilter{
+        display: none;
+        position: absolute;
+        width: 200px;
     }
-    .Aprencs-dens > h1{
+     #valor{
+        width: 200px;
+    }
+
+      .Aprencs-dens > h1{
         width: 350px;
         margin-right: 50px;
     }
+   .Att{
+    margin-right: 100px;
+   }
+   .Att >h1{
+    font-size: 1.5em;
+   }
+   .Att >a {
+    font-size: 1.0em;
+   }
+   .Serviço{
+    margin-right: 100px;
+   }
+   .Serviço > h1{
+    font-size: 1.5em;
+   }
+   .Serviço > a{
+    font-size: 1.0em;
+   }
+   .Pag > h1{
+    font-size: 1.5em;
+   }
+   .Pag > a{
+    font-size: 1.0em;
+   }
+   
 }
 @media screen and (min-width:992px) {
-   
-    #Opfilter{
-        display: block;
-        position: absolute;
-        float: left;
-        width: 100px;
-    }
-    article{
-        width: 90%;
-        float: right;
-        display: flex;
-        justify-content: center;
-        text-align: center;
-    }
-   .menu h1{
+    .menu h1{
         margin-right:100px ;
    }
     #pesquisa{
@@ -87,18 +93,43 @@
         width: 250px;
         right: 8%;
     }
-    .Valor{
-        margin: 5px 0; 
-    }
-    .btn-compra{
+     .btn-compra{
         margin-bottom: 5px;
+    }
+
+    #Opfilter{
+        display: none;
+        width: 250px;
+        background-color: darkgray;
     }
    
     #valor{
-        width:100px;
+        width:200px;
     }
     .Aprencs-dens > h1{
         width: 350px;
         margin-right: 50px;
+    }
+
+    .Att{
+       margin-right: 250px;
+    }
+    .Att > h1{
+        font-size: 1.5em;
+    }
+    .Att > a{
+        font-size: 1.0em;
+    }
+    .Serviço{
+        margin-right: 250px;
+    }
+    .Serviço > h1{
+        font-size: 1.5em;
+    }
+    .Serviço . a{
+        font-size: 1.0em;
+    }
+    .Pag > h1{
+        font-size: 1.5em;
     }
 }  

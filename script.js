@@ -290,3 +290,19 @@ function Vinho(){
             apresentaçao.style.display = 'block'
         }
 }
+
+
+const filterElement = document.querySelector('pesquisa')
+const cards = document.querySelector('.Aprencs')
+
+filterElement.addEventListener('input', filterCards)
+
+function filterCards(){
+    if(filterElement.value != ''){
+        for(let card of cards){
+            let title = card.querySelector('h1')
+            title = title.textContent.toLowecase()
+            console.log(title)
+        }
+    }
+}
