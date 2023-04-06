@@ -217,27 +217,76 @@ function limpar(){
 
 const itens=[
     {
-        imgp:'./imagens/01-p.jpg',
-        img:'./imagens/01.jpg',
-    }
+        imga:'./imagens/01.jpg',
+        imgb:'./imagens/02.jpg',
+        imgc:'./imagens/03.jpg',
+    },
+    
 ]
  var containerAp = document.getElementById('apresentaçao')
 function Cerveja() {
-
         itens.map((val)=>{
+            apresentaçao.style.background='url(../imagens/fundo-cerveja.jpg)'
+            apresentaçao.style.backgroundSize='cover'
+            apresentaçao.style.backgroundPosition='top top'
+            apresentaçao.style.backgroundAttachment='fixed'
             containerAp.innerHTML=''
-            window.location.href='#apresentaçao'
-
             containerAp.innerHTML+=`
             <div class="Aprencs">
-            <h1>Cerveja com a melhor qualidade</h1>
-            <img src="`+val.img+`" alt="">
-
+            <div class="Aprencs-dens">
+            <h1>Refresque-se Com o sabor autêntico e icomparavel da nossa cerveja, perfeita para acaompanhar bons momentos com amigos e familia.</h1>
+            <img src="`+val.imga+`" alt="Foto de apresentação da cerveja">
+            </div>
         </div>
             `
         })
+    if(apresentaçao.style.display == 'block'){
+        apresentaçao.style.display ='none'
+    }else{
+        apresentaçao.style.display='block'
+    }
     }
 
-
-function whisky(){
+function Whisky(){
+    itens.map((val)=>{
+        apresentaçao.style.background='url(../imagens/fundo-whisky.jpg)'
+        apresentaçao.style.backgroundSize='cover'
+        apresentaçao.style.backgroundPosition='center center'
+        apresentaçao.style.backgroundAttachment='fixed'
+        containerAp.innerHTML=''
+        containerAp.innerHTML+=`
+        <div class="Aprencs">
+        <div class="Aprencs-dens">
+        <h1>Sinta o verdadeiro sabor da sofisticação com nossos whisky de qualidade premium, ideal para momentos únicos e especiais.</h1>
+        <img src="`+val.imgb+`" alt="Foto de apresentação do Whisky">
+        </div>
+        </div>
+        `})
+        if(apresentaçao.style.display =='block'){
+            apresentaçao.style.display ='none'
+        }else{
+            apresentaçao.style.display = 'block'
+        }
+}
+function Vinho(){
+    itens.map((val) =>{
+        apresentaçao.style.background='url(../imagens/fundo-vinho.jpg)'
+        apresentaça.styl.backgroundRepeat='no-repeat'
+        apresentaçao.style.backgroundSize='cover'
+        apresentaça.style.backgroundPosition='bottom bottom'
+        apresentaça.style.backgroundAttachment='fixed'
+        containerAp.innerHTML=''
+        containerAp.innerHTML+=`
+        <div class="Aprencs">
+        <div class="Aprencs-dens">
+        <h1>Desfrute de um sabor refinado com nossos vinho de alta qualidade, perfeito para qualquer ocasião!</h1>   
+        <img src="`+val.imgc+`" alt="Foto de apresentação do vinho">
+        </div>
+        </div>
+        `})
+        if(apresentaçao.style.display == 'block'){
+            apresentaçao.style.display = 'none'
+        }else{
+            apresentaçao.style.display = 'block'
+        }
 }
