@@ -217,11 +217,12 @@ function limpar(){
 
 const itens=[
     {
-        imga:'./imagens/01.jpg',
-        imgb:'./imagens/02.jpg',
-        imgc:'./imagens/03.jpg',
-    },
+        imga:'../imagens/01.jpg',
     
+        imgb:'../imagens/02.jpg',
+  
+        imgc:'../imagens/03.jpg',
+    }
 ]
  var containerAp = document.getElementById('apresentaçao')
 function Cerveja() {
@@ -269,12 +270,11 @@ function Whisky(){
         }
 }
 function Vinho(){
-    itens.map((val) =>{
+    itens.map((val)=>{
         apresentaçao.style.background='url(../imagens/fundo-vinho.jpg)'
-        apresentaça.styl.backgroundRepeat='no-repeat'
         apresentaçao.style.backgroundSize='cover'
-        apresentaça.style.backgroundPosition='bottom bottom'
-        apresentaça.style.backgroundAttachment='fixed'
+        apresentaçao.style.backgroundPosition='left center'
+        apresentaçao.style.backgroundAttachment='fixed'
         containerAp.innerHTML=''
         containerAp.innerHTML+=`
         <div class="Aprencs">

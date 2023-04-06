@@ -231,6 +231,9 @@ article{
 }
 
 
+#apresentaçao{
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.485);
+}
 .Aprencs{
     text-align: center;
     padding: 10px;
