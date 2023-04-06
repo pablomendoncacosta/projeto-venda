@@ -221,23 +221,23 @@ const itens=[
         img:'./imagens/01.jpg',
     }
 ]
-
+ var containerAp = document.getElementById('apresentaçao')
 function Cerveja() {
-    var containerAp = document.getElementById('apresentaçao')
+
         itens.map((val)=>{
             containerAp.innerHTML=''
             window.location.href='#apresentaçao'
+
             containerAp.innerHTML+=`
-            <div class="Apren-cs">
-            <picture>
-            <source media="(max-width: 780px)" srcset="`+val.imgp+`" type="image/jpg">
+            <div class="Aprencs">
+            <h1>Cerveja com a melhor qualidade</h1>
             <img src="`+val.img+`" alt="">
-        </picture>
-            </div>
+
+        </div>
             `
         })
     }
 
 
-
-
+function whisky(){
+}
