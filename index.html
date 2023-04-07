@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site de vena</title>
+    <link rel="shortcut icon" href="imagens/01-p.jpg" type="image/x-icon">
     <link rel="stylesheet" href="Estilo/style.css">
     <link rel="stylesheet" href="Estilo/mediaquery.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
@@ -28,13 +29,13 @@
                        <p>0</p>
                     </div>
                     <div id="prodt">
-                        <div id="Fan-carrinho">
+                        <div id="Fan-carrinho" >
                             <p>Seu carrinho esta vario</p>
                         </div>
                         <div class="Valor">
                             <p>TOTAl</p>
                             <div id="preco">
-              
+            
                             </div>
                 
                         </div>
@@ -60,24 +61,29 @@
                     <div id="Opfilter">
                     <ul> <div onclick="Pvalor()">Valor</div>
                         <li id="value">
-                            <label for="Value">Pesquisa:</label><br>
-                            <input type="number" name="num" id="valor" placeholder="Pesquisa" step="5">
+                            <label for="Numberpes">Pesquisa:</label><br>
+                            <input type="number" name="num" id="Numberpes" placeholder="Pesquisa" min="0" step="5">
                         </li>
                     </ul>
                     <ul> <div onclick="alcool()">Com ou Sem alcool</div>
-                        <li id="cosalcool">
+                        <li id="ComouSem">
                             <input type="radio" name="alcool" id="calc">
                             <label for="calc">Com álcool</label><br>
                             <input type="radio" name="alcool" id="salc">
                              <label for="salc">Sem álcool</label><br>
-                            <button onclick="PesAlcool()">Pesquisar</button>
+                            <button onclick="alco()">Pesquisar</button>
                         </li>
                     </ul>
                 </div>
             </div><!--fan-fil-->
         </section>
-        <section id="apresentaçao">
-            
+        <section>
+            <div  id="apresentaçao">
+
+            </div>
+            <div id="resultadoAL">
+
+            </div>
         </section>
         <article>
             <div id="produtos">

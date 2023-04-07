@@ -36,13 +36,36 @@ function Pvalor(){
     }
 }
 function alcool(){
-    if(cosalcool.style.display == 'block'){
-        cosalcool.style.display = 'none'
+    if(ComouSem.style.display == 'block'){
+        ComouSem.style.display = 'none'
     }else{
-        cosalcool.style.display ='block'
+        ComouSem.style.display ='block'
     }
 }
-
+function alco(){
+    var resultado = document.querySelector("#resultadoAL");
+     var fx = document.getElementsByName("alcool");
+     if(fx[0].checked){
+         resultado.innerHTML=`Essa são nossas bebidas alcoólica `
+         resultado.style.textAlign  = "center";
+         resultado.style.color = "white";
+         resultado.style.border = "1px solid black"
+         resultado.style.backgroundColor = "#F29F05";
+         resultado.style.marginTop ="10px";
+         resultado.style.fontSize  = "1.3em";
+     } else if(fx[1].checked){
+         resultado.innerHTML=`Por enquanto não temos esse produto disponivel`
+         resultado.style.textAlign  = "center";
+         resultado.style.color = "white";
+         resultado.style.marginTop ="10px";
+         resultado.style.fontSize  = "1.3em";
+         resultado.style.border = "1px solid black";
+         resultado.style.backgroundColor = "#BFA399";
+     }else{
+         window.alert('Por favor selecione alguma opeção![ERRO]')
+         
+     }
+ }    
 
 const items=[
     {
@@ -131,7 +154,7 @@ inicializarLoja = () =>{
         <h1>`+val.nome+`</h1>
         <h3><del>`+val.desconto+`</del></h3> 
         <p>`+val.informacao+`</p>
-        <h2 class="ValorPd">`+val.valor+`</h2>
+        <h2 class="ValorPd">`+valr+`</h2>
         <a  key="`+val.id+`" class="button" href"#">Comprar</a>
         </div>  
         </div>
@@ -141,18 +164,13 @@ inicializarLoja = () =>{
 
 inicializarLoja();
 
-var Single = document.querySelector('.single')
-console.log(Single)
-for(var i = 0; i < Single.length; i++){ 
-const signlevalor = Single[i].querySelector('.ValorPd')
-console.log(signlevalor)  
-}
+
+
 
 atualizarCarrinho = () => {
     var containerCarrinho = document.getElementById('Fan-carrinho')
     containerCarrinho.innerHTML="";
     items.map((val)=>{
-
         var valr = val.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
         if(val.quantidade > 0){
             location.href='#carinho'
@@ -160,18 +178,17 @@ atualizarCarrinho = () => {
             prodt.style.display='block'
             containerCarrinho.innerHTML+=`
             <hr>
-            <p id="quantidade">           
-            <label for="iexpluir">`+val.nome+`  quantidade:`+val.quantidade+`|`+valr+`|</label>
-            <input type="radio" name="expluir" id="iexpluir"></p>
+            <div id="quantidade"  class="quant">
+            <p>`+val.nome+`| quantidade:<span class="qcarrinho">`+val.quantidade+`</span> valor:<span class="ValoPd">`+valr+`</span></p> 
+            </div>
             <hr>
+    
         `;}     
         if(val.quantidade>0){
             quantidadecar.innerHTML="";
             quantidadecar.innerHTML+=`<p>`+val.quantidade+`</p>`
 
         } 
-        
-    
     })
 }
 
@@ -185,27 +202,30 @@ for(var i = 0; i < links.length; i++){
         return false;
     })
 }
+items.map((val)=>{
+    var total = 0
+    var preco = document.getElementById('preco')
+    var single = document.getElementsByClassName('single')
+     console.log(single)
+    for(var i = 0; i < single.length; i++){ 
+    const signlevalor = single[i].getElementsByClassName("ValorPd")[0].innerText.replace("R$","").replace(",", ".")
+    const produto = single[i].querySelector(".qcarrinho")
+    console.log(signlevalor)
+    total = signlevalor * produto
+    }
+    preco.innerHTML="";
+    preco.innerHTML+=`
+    <p>`+total+`</p>
+    `
+})
+
+
 
 function limpar(){
-    var elemento = document.getElementById('quantidade')
- 
-    
-    items.map((val)=>{
-
-    if (iexpluir > 0){
-        window.alert("Selecione um produto")
-    }else    {
+    var elemento = document.querySelector('#quantidade')
         elemento.remove();
-        var valo = val.quantidade
-        var quantidade = valr
-        var resultado = `${valo - quantidade}`;
-        preco.innerHTML=''
-        preco.innerHTML+=`
-        <p>`+resultado+`</p>
-`       
-        }   
-    })
 }
+
 
 const itens=[
     {
@@ -216,6 +236,7 @@ const itens=[
         imgc:'../imagens/03.jpg',
     }
 ]
+
  var containerAp = document.getElementById('apresentaçao')
 function Cerveja() {
         itens.map((val)=>{
@@ -294,7 +315,7 @@ function filterCards(){
         for(let card of cards){
             let title = card.querySelector('h1')
              title = title.textContent.toLowerCase()
-            console.log(title)
+    
             let filterText = filterElement.value.toLowerCase()
             if(!title.includes(filterText)){
                 card.style.display = "none"
@@ -308,5 +329,25 @@ function filterCards(){
 }
 }
 }
-    
-    
+const filter = document.querySelector('section input')
+const card = document.querySelectorAll('#fan-single')
+
+filter.addEventListener('input', filterNum)
+function filterNum(){
+    if(filter.value != ''){
+    for(let card of cards){
+        let title = card.querySelector('h2')
+        title = title.textContent.toLowerCase()
+        console.log(title)
+        let filterText = filter.value.toLowerCase()
+        if(!title.includes(filterText)){
+            card.style.display="none"
+        }else{
+            card.style.display = "inline-flex"
+        }
+    }
+    }else{
+        card.style.display = 'inline-flex'
+    }
+}
+

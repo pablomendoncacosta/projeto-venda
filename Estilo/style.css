@@ -141,7 +141,7 @@ header{
 #Opfilter{
     display: none;
 }
- #valor{
+ #Numberpes{
     width: 100px;
 }
 
@@ -238,6 +238,9 @@ article{
 
 #apresentaçao{
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.485);
+}
+#resultadoAL{
+    text-align: center;
 }
 .Aprencs{
     text-align: center;
