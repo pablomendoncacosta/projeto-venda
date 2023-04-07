@@ -124,7 +124,6 @@ inicializarLoja = () =>{
     
     items.map((val) =>{
         var valr = val.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
-        console.log(valor)
         containerProdutos.innerHTML+=`
         <div  id="fan-single">
         <div class="single">
@@ -132,8 +131,8 @@ inicializarLoja = () =>{
         <h1>`+val.nome+`</h1>
         <h3><del>`+val.desconto+`</del></h3> 
         <p>`+val.informacao+`</p>
-        <h2>`+valr+`</h2>
-        <a key="`+val.id+`" class="button" href"#">Comprar</a>
+        <h2 class="ValorPd">`+val.valor+`</h2>
+        <a  key="`+val.id+`" class="button" href"#">Comprar</a>
         </div>  
         </div>
         `;
@@ -141,6 +140,13 @@ inicializarLoja = () =>{
 }
 
 inicializarLoja();
+
+var Single = document.querySelector('.single')
+console.log(Single)
+for(var i = 0; i < Single.length; i++){ 
+const signlevalor = Single[i].querySelector('.ValorPd')
+console.log(signlevalor)  
+}
 
 atualizarCarrinho = () => {
     var containerCarrinho = document.getElementById('Fan-carrinho')
@@ -161,20 +167,11 @@ atualizarCarrinho = () => {
         `;}     
         if(val.quantidade>0){
             quantidadecar.innerHTML="";
-            val.quantidade++;
             quantidadecar.innerHTML+=`<p>`+val.quantidade+`</p>`
 
         } 
-         if(val.quantidade > 0){
-            preco.innerHTML=''
-            var valo = val.valor
-            var quantidade = val.quantidade
-            var resultado = `${valo * quantidade}`
-        ;
-        console.log(valo)
-        preco.innerHTML+=`
-        <p>`+resultado+`</p>
-        ` }
+        
+    
     })
 }
 
@@ -189,30 +186,25 @@ for(var i = 0; i < links.length; i++){
     })
 }
 
-atualizarPreco = () => {
-    var containerPreco = document.getElementById('preco')
-    containerPreco.innerHTML="";
-    items.map((val)=>{
-        if(val.quantidade > 0){
-
-            console.log(val.quantidade)
-                resultado = quantidade * val.valor
-            console.log(resultado)
-            containerPreco.innerHTML+=`
-            <p >  `+resultado+`  </p>
-        `;}     
-
-    })
-}
-atualizarPreco();
-
 function limpar(){
     var elemento = document.getElementById('quantidade')
+ 
+    
+    items.map((val)=>{
+
     if (iexpluir > 0){
-        window.alert("oj")
+        window.alert("Selecione um produto")
     }else    {
         elemento.remove();
-    }
+        var valo = val.quantidade
+        var quantidade = valr
+        var resultado = `${valo - quantidade}`;
+        preco.innerHTML=''
+        preco.innerHTML+=`
+        <p>`+resultado+`</p>
+`       
+        }   
+    })
 }
 
 const itens=[
@@ -292,17 +284,32 @@ function Vinho(){
 }
 
 
-const filterElement = document.querySelector('pesquisa')
-const cards = document.querySelector('.Aprencs')
+const filterElement = document.querySelector('header input')
+const cards = document.querySelectorAll('#fan-single')
 
 filterElement.addEventListener('input', filterCards)
 
 function filterCards(){
     if(filterElement.value != ''){
+
         for(let card of cards){
             let title = card.querySelector('h1')
-            title = title.textContent.toLowecase()
+             title = title.textContent.toLowerCase()
             console.log(title)
+            let filterText = filterElement.value.toLowerCase()
+            if(!title.includes(filterText)){
+                card.style.display = "none"
+                produtos.innerHTML='Produto Nao encontrado'
+                produtos.style.background=''
+            }else{
+                card.style.display ="inlineflex"
+            }
         }
-    }
+    }else{
+        for(let card of cards){
+            card.style.display = "inline-flex"
 }
+}
+}
+    
+    
