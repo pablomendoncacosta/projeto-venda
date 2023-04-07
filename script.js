@@ -127,7 +127,7 @@ const items=[
         nome:'Whisky Royal Salute 700ml',
         img:'imagens/reyalsalute.png',
         desconto:'R$1150',
-        valor:1100,
+        valor:800,
         informacao:'Por Unidade',
         quantidade:0
     },
@@ -155,7 +155,7 @@ inicializarLoja = () =>{
         <h3><del>`+val.desconto+`</del></h3> 
         <p>`+val.informacao+`</p>
         <h2 class="ValorPd">`+valr+`</h2>
-        <a  key="`+val.id+`" class="button" href"#">Comprar</a>
+        <a onclick="Atualizarvalor()" key="`+val.id+`" class="button" href"#">Comprar</a>
         </div>  
         </div>
         `;
@@ -178,17 +178,17 @@ atualizarCarrinho = () => {
             prodt.style.display='block'
             containerCarrinho.innerHTML+=`
             <hr>
-            <div id="quantidade"  class="quant">
-            <p>`+val.nome+`| quantidade:<span class="qcarrinho">`+val.quantidade+`</span> valor:<span class="ValoPd">`+valr+`</span></p> 
+            <div id="quantidade" >
+            <div  class="quant">
+            <p>`+val.nome+`| quantidade:
+            <span id="qcarrinho">`+val.quantidade+`</span> 
+            valor:<span id="ValorPd">`+val.valor+`<span></p> 
             </div>
             <hr>
     
         `;}     
-        if(val.quantidade>0){
-            quantidadecar.innerHTML="";
-            quantidadecar.innerHTML+=`<p>`+val.quantidade+`</p>`
-
-        } 
+    
+        
     })
 }
 
@@ -202,28 +202,39 @@ for(var i = 0; i < links.length; i++){
         return false;
     })
 }
-items.map((val)=>{
-    var total = 0
-    var preco = document.getElementById('preco')
-    var single = document.getElementsByClassName('single')
-     console.log(single)
-    for(var i = 0; i < single.length; i++){ 
-    const signlevalor = single[i].getElementsByClassName("ValorPd")[0].innerText.replace("R$","").replace(",", ".")
-    const produto = single[i].querySelector(".qcarrinho")
-    console.log(signlevalor)
-    total = signlevalor * produto
-    }
-    preco.innerHTML="";
-    preco.innerHTML+=`
-    <p>`+total+`</p>
-    `
-})
 
 
+function Atualizarvalor(){
+let total = 0
+const single = document.getElementsByClassName("quant")
 
+for(var i = 0; i < single.length; i++){ 
+var signlevalor = document.getElementById("ValorPd")
+var valor = signlevalor.innerText
+console.log(valor)
+var produto = document.getElementById("qcarrinho")
+var produto = produto.innerText
+
+total += (valor * produto)
+var resvalor = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
+preco.innerHTML="";
+preco.innerHTML+=`
+<p>`+resvalor+`</p>
+` 
+quantidadecar.innerHTML="";
+ quantidadecar.innerHTML+=`<p>`+produto+`</p>`
+}
+
+  
+
+
+}
+
+ 
 function limpar(){
     var elemento = document.querySelector('#quantidade')
         elemento.remove();
+        Atualizarvalor()
 }
 
 
