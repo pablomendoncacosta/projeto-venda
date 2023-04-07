@@ -291,7 +291,6 @@ filterElement.addEventListener('input', filterCards)
 
 function filterCards(){
     if(filterElement.value != ''){
-
         for(let card of cards){
             let title = card.querySelector('h1')
              title = title.textContent.toLowerCase()
@@ -299,10 +298,8 @@ function filterCards(){
             let filterText = filterElement.value.toLowerCase()
             if(!title.includes(filterText)){
                 card.style.display = "none"
-                produtos.innerHTML='Produto Nao encontrado'
-                produtos.style.background=''
             }else{
-                card.style.display ="inlineflex"
+                 card.style.display ="inlineflex"
             }
         }
     }else{

@@ -271,7 +271,7 @@ footer{
     margin-bottom: 20px;
 }
 .Att > h1{
-    font-size: 1.2em;
+    font-size: 1.0em;
     font-weight: bold;
 }
 .Att > a{
@@ -279,7 +279,7 @@ footer{
     text-decoration: none;
     color: black;
     margin-top: 5px;
-    font-size: 15px;
+    font-size:0.7em;
 }
 .Att span{
     color: black;
@@ -293,17 +293,14 @@ footer{
     padding-bottom: 5px;
 }
 .Serviço > h1{
-    font-size: 1.2em;
+    font-size: 1.0em;
     font-weight: bold;
 }
 .Serviço > a{
     text-decoration: none;
+    font-size: 1.0em;
     color: black;
 }
 .Serviço >a:hover{
     color: #965842;
-}
-.Pag > h1{  
-    font-size: 1.2em;
-    font-weight: bold;
 }

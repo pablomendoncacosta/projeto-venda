@@ -67,12 +67,7 @@
    .Serviço > a{
     font-size: 1.0em;
    }
-   .Pag > h1{
-    font-size: 1.5em;
-   }
-   .Pag > a{
-    font-size: 1.0em;
-   }
+
    
 }
 @media screen and (min-width:992px) {
@@ -129,7 +124,5 @@
     .Serviço . a{
         font-size: 1.0em;
     }
-    .Pag > h1{
-        font-size: 1.5em;
-    }
+  
 }  
