@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bebidas- Seja Bem-vindo novamente! Caso não tenha conta faça um cadastro. </title>
+    <link rel="stylesheet" href="conta/style.css">
+    <script src="conta/script.js"></script>
+    <script type="text/javascript" src="conta/vanilla-tilt.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
+    <main>
+        <section class="login"> 
+        <div class="imagen">
+       </div>
+       <div class="email">
+            <form action="Login.PHP" method="post" autocomplete="on">
+            <span class="material-icons">person</span>
+            <input type="email" name="Email" id="Iemail" placeholder="E-mail" required autocomplete="email" minlength="4" maxlength="30">
+            <label for="Iemail">Login</label>
+        </div>
+        <div class="email">
+        <span class="material-icons">vpn_key</span>
+        <input type="password" name="pass" id="senha" placeholder="password" autocomplete="new-password" required minlength="6" maxlength="8">
+        <label for="senha">password</label>
+        </div>
+        <input type="submit" value="Entrar">
+        <div class="LoginCadas">
+            <a href="#">cadastre-se</a>
+            <a href="#">Esqueceu a senha</a>
+        </div>
+        </form>
+      
+        </section>
+    </main>
+  <script>
+
+    VanillaTilt.init(document.querySelector(".imagen"));
+  </script>
     
 </body>
 </html>
