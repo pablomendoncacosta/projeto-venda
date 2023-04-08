@@ -262,7 +262,7 @@ function Cerveja() {
             <div class="Aprencs-dens">
             <h1>Refresque-se Com o sabor autêntico e icomparavel da nossa cerveja, perfeita para acaompanhar bons momentos com amigos e familia.</h1>
             <picture>
-            <source media="(min-width: 720px )" srcset="`+val.imgpa+`" type="image/jpg">
+            <source media="(max-width: 720px )" srcset="`+val.imgpa+`" type="image/jpg">
             <img src="`+val.imga+`" alt="Foto de apresentação da cerveja">
             </picture>
             </div>
