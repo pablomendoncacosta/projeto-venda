@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bebidas- Seja Bem-vindo novamente! Caso não tenha conta faça um cadastro. </title>
     <link rel="stylesheet" href="conta/style.css">
+    <link rel="stylesheet" href="conta/Querystyle.css">
     <script src="conta/script.js"></script>
     <script type="text/javascript" src="conta/vanilla-tilt.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -16,6 +17,8 @@
         <section class="login"> 
         <div class="imagen">
        </div>
+       <h1>Login</h1>
+       <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configuraçãoes no seu ambiente.</p>
        <div class="email">
             <form action="Login.PHP" method="post" autocomplete="on">
             <span class="material-icons">person</span>
@@ -27,8 +30,9 @@
         <input type="password" name="pass" id="senha" placeholder="password" autocomplete="new-password" required minlength="6" maxlength="8">
         <label for="senha">password</label>
         </div>
-        <input type="submit" value="Entrar">
-        <div class="LoginCadas">
+        <input class="entrar" type="submit" value="Entrar">
+        <div class="cadrast">
+          <hr>
             <a href="#">cadastre-se</a>
             <a href="#">Esqueceu a senha</a>
         </div>

@@ -1,0 +1,65 @@
+@charset "UTF-8";
+@media print {
+    section::after{
+        content: 'Desenvolvido por Pablo Costa';
+    }    
+}
+@media screen and (min-width:768px) and (max-width:992px){
+    body{
+        background: linear-gradient(to top,#bf3a308b ,#f207328b );
+    }
+    .login{
+        height: 320px;
+        width: 80vw;
+
+    }
+    section > .imagen{
+
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+    .email{
+        float: right;
+        width: 70%;
+        margin-top: 10px;
+    }
+    
+    .cadrast{
+        margin-top: 20px;
+        font-size: 1.3em;
+    }
+}
+@media screen and (min-width:992px) {
+    .login{
+        height: 380px;
+        width: 85vw;
+    
+    }
+    .login > h1{
+        font-size: 2.5em;
+    }
+    .login > p{
+        font-size: 1.4em;
+    }
+    section > .imagen{
+        float: left;
+        width: 30%;
+        height: 100%;
+    }
+    .email{
+        display: block;
+        float: left;
+        margin-top: 35px;
+        margin-left: 100px;
+        width: 50%;
+    }
+    .entrar{
+        width: 20%;
+        margin-top: 24px;
+    }
+    .cadrast{
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
+}
