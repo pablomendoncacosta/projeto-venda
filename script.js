@@ -241,10 +241,11 @@ function limpar(){
 const itens=[
     {
         imga:'../imagens/01.jpg',
-    
+        imgpa:'../imagens/01-p.jpg',
         imgb:'../imagens/02.jpg',
-  
+        imgpb:'../imagens/02-p.jpg',
         imgc:'../imagens/03.jpg',
+        imgpc:'../imagens/03-p.jpg',
     }
 ]
 
@@ -260,7 +261,10 @@ function Cerveja() {
             <div class="Aprencs">
             <div class="Aprencs-dens">
             <h1>Refresque-se Com o sabor autêntico e icomparavel da nossa cerveja, perfeita para acaompanhar bons momentos com amigos e familia.</h1>
+            <picture>
+            <source media="(min-width: 720px )" srcset="`+val.imgpa+`" type="image/jpg">
             <img src="`+val.imga+`" alt="Foto de apresentação da cerveja">
+            </picture>
             </div>
         </div>
             `
@@ -283,7 +287,10 @@ function Whisky(){
         <div class="Aprencs">
         <div class="Aprencs-dens">
         <h1>Sinta o verdadeiro sabor da sofisticação com nossos whisky de qualidade premium, ideal para momentos únicos e especiais.</h1>
+        <picture>
+        <source media="(min-width: 720px )" srcset="`+val.imgpb+`" type="image/jpg">
         <img src="`+val.imgb+`" alt="Foto de apresentação do Whisky">
+        </picture>
         </div>
         </div>
         `})
@@ -304,7 +311,10 @@ function Vinho(){
         <div class="Aprencs">
         <div class="Aprencs-dens">
         <h1>Desfrute de um sabor refinado com nossos vinho de alta qualidade, perfeito para qualquer ocasião!</h1>   
-        <img src="`+val.imgc+`" alt="Foto de apresentação do vinho">
+        <picture>
+        <source media="(min-width: 720px )" srcset="`+val.imgpc+`" type="image/jpg">
+        <img src="`+val.imgc+`" alt="Foto de apresentação do Vinho">
+        </picture>
         </div>
         </div>
         `})
