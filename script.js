@@ -154,7 +154,7 @@ inicializarLoja = () =>{
         <h1>`+val.nome+`</h1>
         <h3><del>`+val.desconto+`</del></h3> 
         <p>`+val.informacao+`</p>
-        <h2 class="ValorPd">`+valr+`</h2>
+        <h2>`+valr+`</h2>
         <a onclick="Atualizarvalor()" key="`+val.id+`" class="button" href"#">Comprar</a>
         </div>  
         </div>
