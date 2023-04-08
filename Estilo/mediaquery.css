@@ -21,7 +21,7 @@
         margin-right: 100px;
         width: 40%;
     }
-    #conta{
+    .menu > a{
        margin-right:50px;
     }
   
@@ -78,7 +78,7 @@
         margin-right: 100px;
         width: 40%;
     }
-    #conta{
+    .menu > a{
         justify-content: right;
         margin-right:100px;
     }

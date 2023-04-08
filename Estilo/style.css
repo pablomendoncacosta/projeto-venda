@@ -45,12 +45,13 @@ header{
     margin-top:10px;
     margin-right: 5px;
 }
-#conta{
+.menu > a{
     height: 25px;
     margin-right: 5px;
     margin-top: 10px;
     padding: 2px;
     color: white;
+    text-decoration: none;
     background-color: rgba(130, 23, 23, 0.176);
 }
 #conta:hover{
