@@ -173,21 +173,21 @@ atualizarCarrinho = () => {
     items.map((val)=>{
         var valr = val.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
         if(val.quantidade > 0){
-            location.href='#carinho'
-            window.location.href='#prodt'
-            prodt.style.display='block'
+            window.location.href="#prodt"
+            prodt.style.display ="block"
             containerCarrinho.innerHTML+=`
             <hr>
             <div id="quantidade" >
             <div  class="quant">
             <p>`+val.nome+`| quantidade:
-            <span id="qcarrinho">`+val.quantidade+`</span> 
-            valor:<span id="ValorPd">`+val.valor+`<span></p> 
+            <span `+val.quantidade+`</span> 
+            valor:<span>`+val.valor+`<span></p> 
+            <input type="text" value="`+val.valor+`" name="valor" id="ValorPd">
+            <input type="text" value="`+val.quantidade+`" name="valor" id="qcarrinho">
             </div>
             <hr>
     
         `;}     
-    
         
     })
 }
@@ -205,32 +205,22 @@ for(var i = 0; i < links.length; i++){
 
 
 function Atualizarvalor(){
-let total = 0
-const single = document.getElementsByClassName("quant")
+    let total = 0
+        var produto = document.querySelectorAll("#qcarrinho").value
+        var signlevalor = document.querySelectorAll("#ValorPd").value
+        console.log(signlevalor)
+        console.log(produto)
+        for(var i = 0; i < produto.length; i++){ 
 
-for(var i = 0; i < single.length; i++){ 
-var signlevalor = document.getElementById("ValorPd")
-var valor = signlevalor.innerText
-console.log(valor)
-var produto = document.getElementById("qcarrinho")
-var produto = produto.innerText
-
-total += (valor * produto)
-var resvalor = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
-preco.innerHTML="";
-preco.innerHTML+=`
-<p>`+resvalor+`</p>
-` 
-quantidadecar.innerHTML="";
- quantidadecar.innerHTML+=`<p>`+produto+`</p>`
+    total = (signlevalor * produto)
+    var resvalor = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); 
+    preco.innerHTML="";
+    preco.innerHTML+=`
+    <p>`+resvalor+`</p>
+    ` 
+    }
 }
 
-  
-
-
-}
-
- 
 function limpar(){
     var elemento = document.querySelector('#quantidade')
         elemento.remove();
